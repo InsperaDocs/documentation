@@ -1,0 +1,28 @@
+---
+title: "Create Student"
+description: "Create a new student user.  "
+---
+
+This API call creates a new student user on the platform. You must specify the user's name, email, role, and status.
+
+### Request Parameters
+
+<ParamField body="firstName" type="string" required>
+  Enter the name for the new educator.
+</ParamField>
+
+<ParamField body="lastName" type="string" required>
+  Enter the last name for the new educator.
+</ParamField>
+
+<ParamField body="role" type="string" required>
+  Assign `student` as the role for the new user.
+</ParamField>
+
+<ParamField body="email" type="string" required>
+  Enter the email for the new educator.
+</ParamField>
+
+<ParamField body="status" type="string" required>
+  Enter the status for the new eduactor. Use `1` for active status and `0` for inactive status.
+</ParamField>
