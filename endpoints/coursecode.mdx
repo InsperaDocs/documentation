@@ -1,0 +1,13 @@
+---
+title: "Retrieve Subject Information via Code"
+description: "Retrieve information about a specific subject using its code. "
+api: "GET /courses-info"
+---
+
+This GET request retrieves detailed information about a specific course by including the course’s unique identification code `courseCode` as a required query parameter in the URL. The request is sent to the `{{baseURL}}/courses-info` endpoint, and the API returns the corresponding course details.
+
+### Request Parameters
+
+<ParamField query="courseCode" required>
+  Enter the unique identifier of the subject to retrieve its information.
+</ParamField>

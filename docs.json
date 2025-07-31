@@ -44,7 +44,7 @@
             "pages": [
               "endpoints/authorization",
               "endpoints/createeducator",
-              "development"
+              "endpoints/coursecode"
             ]
           }
         ]
