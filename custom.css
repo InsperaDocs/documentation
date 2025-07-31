@@ -20,11 +20,6 @@ th {
   display: none;  /* Safari and Chrome */
 }
 
-#banner {
-background: #3F5EFB;
-background: radial-gradient(circle, rgba(63, 94, 251, 1) 24%, rgba(252, 70, 107, 1) 90%);
-}
-
 .max-w-xl {
 max-width: 46rem;
 }
@@ -46,9 +41,10 @@ body *::after {
 }
 
 .nav-logo {
-  height: 5rem; /* Adjust as needed */
+  height: 4.5rem; /* Adjust as needed */
   width: auto;    /* Maintain aspect ratio */
   max-height: 100%;
   margin-top:10px;
+  margin-bottom:10px
   margin-right:10px
 }
