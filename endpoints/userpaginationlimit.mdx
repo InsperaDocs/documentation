@@ -1,0 +1,23 @@
+---
+title: "User Info (Pagination & Limit)"
+description: "Description of your new file."
+---
+
+This **GET** request is used to retrieve user information from the system with support for pagination and limit. By including the `page` and `limt` query parameters, clients can specify which page of user records to fetch and specify the limit of user records shown per page, enabling efficient navigation through large datasets.
+
+The response contains the list of users for the specified page, along with `total`, `page`, `limit`, and `pages`.
+
+- **total** - Represents the total number of users available in the system.
+- **page** - Indicates the current page number being returned in the response. 
+- **limit** - Specifies the limit of user records shown per page. 
+- **pages** - Shows the total number of pages available based on the defined limit.
+
+### Request Parameters
+
+<ParamField query="page" type="number" required placeholder="number">
+  Enter a description
+</ParamField>
+
+<ParamField query="limit" type="number" required placeholder="number">
+  Enter a description
+</ParamField>
