@@ -41,10 +41,8 @@ body *::after {
 }
 
 .nav-logo {
-  height: 4.5rem; /* Adjust as needed */
+  height: 4rem; /* Adjust as needed */
   width: auto;    /* Maintain aspect ratio */
   max-height: 100%;
-  margin-top:10px;
-  margin-bottom:10px
-  margin-right:10px
+  padding: 10px;
 }
