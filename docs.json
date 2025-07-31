@@ -61,6 +61,15 @@
             ]
           },
           {
+            "group": "Retrieve User Information",
+            "icon": "user-round-search",
+            "pages": [
+              "endpoints/useremial",
+              "endpoints/userpagination",
+              "endpoints/userpaginationlimit"
+            ]
+          },
+          {
             "group": "Retrieve Subject Information",
             "icon": "notebook",
             "pages": [
