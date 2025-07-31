@@ -44,3 +44,9 @@ body *::after {
   box-shadow: none !important;  /* removes ring shadows */
   outline: none !important;      /* removes outlines */
 }
+
+.nav-logo {
+  height: 2.5rem; /* Adjust as needed */
+  width: auto;    /* Maintain aspect ratio */
+  max-height: 100%;
+}
