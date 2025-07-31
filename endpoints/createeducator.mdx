@@ -6,6 +6,8 @@ api: "POST /user"
 
 This API call creates a new educator user on the platform. You must specify the user's name, email, role, and status.
 
+### Request Parameters
+
 <ParamField body="firstName" type="string" required>
   Enter the name for the new educator.
 </ParamField>
@@ -19,9 +21,9 @@ This API call creates a new educator user on the platform. You must specify the 
 </ParamField>
 
 <ParamField body="email" type="string" required>
-  Enter the email for the new educator. 
+  Enter the email for the new educator.
 </ParamField>
 
 <ParamField path="param" type="string">
-  Enter the status for the new eduactor. Use `1` for active status and `0` for inactive status. 
+  Enter the status for the new eduactor. Use `1` for active status and `0` for inactive status.
 </ParamField>
