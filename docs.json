@@ -60,7 +60,8 @@
               "endpoints/createeducator",
               "endpoints/createstudent",
               "endpoints/updateeducator",
-              "endpoints/updatestudent"
+              "endpoints/updatestudent",
+              "endpoints/deleteuser"
             ]
           },
           {
