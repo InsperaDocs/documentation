@@ -7,6 +7,12 @@
     "light": "#58A0C8",
     "dark": "#3D74B6"
   },
+"background": {
+  "color": {
+    "light": "#ffffff",
+    "dark": "#121212"
+  }
+},
   "api": {
     "playground": {
       "display": "interactive",
