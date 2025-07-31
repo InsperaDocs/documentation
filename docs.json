@@ -38,7 +38,7 @@
             "group": "API Calls",
             "icon": "webhook",
             "pages": [
-              "index",
+              "endpoints/authorization",
               "quickstart",
               "development"
             ]
