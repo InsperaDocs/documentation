@@ -79,6 +79,13 @@
               "endpoints/coursecode",
               "endpoints/coursepagelimit"
             ]
+          },
+          {
+            "group": "Retrieve Institution Information",
+            "icon": "",
+            "pages": [
+              "endpoints/institutioninfo"
+            ]
           }
         ]
       }
