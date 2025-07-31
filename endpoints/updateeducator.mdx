@@ -1,0 +1,37 @@
+---
+title: "Update Educator"
+description: "Update an educator user. "
+api: "PUT /user-info"
+---
+
+**This PUT request** requires the `userId` as a query parameter in the URL to identify the specific educator whose information will be updated. In the request body, you must provide the educator’s new **first name**, **last name**, and an updated list of **subjects** they will be assigned to. 
+
+### Request Parameters
+
+<ParamField body="userId" type="query">
+  Specify the educator user to update.  
+</ParamField>
+
+<ParamField body="firstName" type="string">
+  Set a new first name for the educator user. 
+</ParamField>
+
+<ParamField body="firstName" type="string">
+  Set a new first name for the educator user. 
+</ParamField>
+
+<ParamField body="lastName" type="string">
+  Set a new last name for the educator user. 
+</ParamField>
+
+<ParamField body="email" type="string">
+  Set a new email for the educator user. 
+</ParamField>
+
+<ParamField body="status" type="string">
+  Set a new status for the educator user. Use 1 for active status and 0 for inactive status. 
+</ParamField>
+
+<ParamField path="userSubjects" type="string">
+  Assign new subjects to the educator user by specifying the subject code. 
+</ParamField>

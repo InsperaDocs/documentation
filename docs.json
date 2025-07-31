@@ -26,9 +26,9 @@
     }
   },
   "fonts": {
-    "family": "IBM Plex Sans",
+    "family": "Space Grotesk",
     "heading": {
-      "family": "IBM Plex Sans"
+      "family": "Space Grotesk"
     },
     "body": {
       "family": "Space Grotesk"
@@ -41,8 +41,7 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "API Documentation",
-        "icon": "webhook",
+        "tab": "Inspera Originality (API)",
         "groups": [
           {
             "group": "Authorize",
@@ -55,7 +54,8 @@
             "group": "Create & Update Users",
             "icon": "user-round-plus",
             "pages": [
-              "endpoints/createeducator"
+              "endpoints/createeducator",
+              "endpoints/updateeducator"
             ]
           },
           {
