@@ -1,119 +1,120 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
-  "theme": "aspen",
-  "name": "Inspera Originality API",
-  "colors": {
-    "primary": "#3D74B6",
-    "light": "#58A0C8",
-    "dark": "#3D74B6"
-  },
-"styling": {
-  "codeblocks": "system"
-},
-"background": {
-  "color": {
-    "light": "#ffffff",
-    "dark": "#121212"
-  }
-},
-  "api": {
-    "playground": {
-      "display": "interactive",
-      "proxy": false
+    "$schema": "https://mintlify.com/docs.json",
+    "theme": "aspen",
+    "name": "Inspera Originality API",
+    "colors": {
+        "primary": "#3D74B6",
+        "light": "#58A0C8",
+        "dark": "#3D74B6"
     },
-    "mdx": {
-      "server": "https://6x6hep4ey9.execute-api.eu-central-1.amazonaws.com/production",
-      "auth": {
-        "method": "bearer"
-      }
-    }
-  },
-  "fonts": {
-    "family": "Space Grotesk",
-    "heading": {
-      "family": "Space Grotesk"
+    "styling": {
+        "codeblocks": "system"
     },
-    "body": {
-      "family": "Space Grotesk"
-    }
-  },
-  "icons": {
-    "library": "lucide"
-  },
-  "favicon": "/favicon.svg",
-  "navigation": {
-    "tabs": [
-      {
-        "tab": "Inspera Originality (API)",
-        "groups": [
-          {
-            "group": "Authorize",
-            "icon": "fingerprint",
-            "pages": [
-              "endpoints/authorization"
-            ]
-          },
-          {
-            "group": "Create, Update, and Delete Users",
-            "icon": "user-round-plus",
-            "pages": [
-              "endpoints/createeducator",
-              "endpoints/createstudent",
-              "endpoints/updateeducator",
-              "endpoints/updatestudent",
-              "endpoints/deleteuser"
-            ]
-          },
-          {
-            "group": "Retrieve User Information",
-            "icon": "user-round-search",
-            "pages": [
-              "endpoints/useremail",
-              "endpoints/userpagination",
-              "endpoints/userpaginationlimit"
-            ]
-          },
-          {
-            "group": "Retrieve Subject Information",
-            "icon": "folder-tree",
-            "pages": [
-              "endpoints/coursecode",
-              "endpoints/coursepagelimit"
-            ]
-          },
-          {
-            "group": "Retrieve Institution Information",
-            "icon": "",
-            "pages": [
-              "endpoints/institutioninfo"
-            ]
-          }
+    "background": {
+        "color": {
+            "light": "#ffffff",
+            "dark": "#121212"
+        }
+    },
+    "api": {
+        "playground": {
+            "display": "interactive",
+            "proxy": false
+        },
+        "mdx": {
+            "server": "https://6x6hep4ey9.execute-api.eu-central-1.amazonaws.com/production",
+            "auth": {
+                "method": "bearer"
+            }
+        }
+    },
+    "fonts": {
+        "family": "Space Grotesk",
+        "heading": {
+            "family": "Space Grotesk"
+        },
+        "body": {
+            "family": "Space Grotesk"
+        }
+    },
+    "icons": {
+        "library": "lucide"
+    },
+    "favicon": "/favicon.svg",
+    "navigation": {
+        "anchors": [
+            {
+                "anchor": "Inspera Originality (API)",
+                "icon": "webhook",
+                "groups": [
+                    {
+                        "group": "Authorize",
+                        "icon": "fingerprint",
+                        "pages": [
+                            "endpoints/authorization"
+                        ]
+                    },
+                    {
+                        "group": "Create, Update, and Delete Users",
+                        "icon": "user-round-plus",
+                        "pages": [
+                            "endpoints/createeducator",
+                            "endpoints/createstudent",
+                            "endpoints/updateeducator",
+                            "endpoints/updatestudent",
+                            "endpoints/deleteuser"
+                        ]
+                    },
+                    {
+                        "group": "Retrieve User Information",
+                        "icon": "user-round-search",
+                        "pages": [
+                            "endpoints/useremail",
+                            "endpoints/userpagination",
+                            "endpoints/userpaginationlimit"
+                        ]
+                    },
+                    {
+                        "group": "Retrieve Subject Information",
+                        "icon": "folder-tree",
+                        "pages": [
+                            "endpoints/coursecode",
+                            "endpoints/coursepagelimit"
+                        ]
+                    },
+                    {
+                        "group": "Retrieve Institution Information",
+                        "icon": "",
+                        "pages": [
+                            "endpoints/institutioninfo"
+                        ]
+                    }
+                ]
+            }
         ]
-      }
-    ]
-  },
-  "logo": {
-    "light": "/logo/logo1.png",
-    "dark": "/logo/logo1.png"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Help Center",
-      "href": "https://support.inspera.com/hc/en-us/categories/15848147005085-Inspera-Originality"
+    },
+    "logo": {
+        "light": "/logo/logo1.png",
+        "dark": "/logo/logo1.png"
+    },
+    "navbar": {
+        "links": [
+            {
+                "label": "Support",
+                "href": "mailto:hi@mintlify.com"
+            }
+        ],
+        "primary": {
+            "type": "button",
+            "label": "Help Center",
+            "href": "https://support.inspera.com/hc/en-us/categories/15848147005085-Inspera-Originality"
+        }
+    },
+    "footer": {
+        "socials": {
+            "x": "https://x.com/mintlify",
+            "github": "https://github.com/mintlify",
+            "linkedin": "https://linkedin.com/company/mintlify"
+        }
     }
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
-  }
 }
