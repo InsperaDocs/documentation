@@ -44,6 +44,13 @@
     "navigation": {
         "groups": [
             {
+              "group": "Environments",
+              "icon": "codesandbox",
+              "pages": [
+                "endpoints/environments"
+              ]
+            },
+            {
                 "group": "Authorize",
                 "icon": "fingerprint",
                 "pages": [
