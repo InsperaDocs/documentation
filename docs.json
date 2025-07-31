@@ -11,6 +11,7 @@
   "codeblocks": "dark"
 },
 "background": {
+  "decoration": "grid",
   "color": {
     "light": "#ffffff",
     "dark": "#121212"
