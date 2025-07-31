@@ -1,0 +1,17 @@
+---
+title: "Subject Info (Page & Limit)"
+description: "Retrieve subject information and filter with pagination and limit. "
+api: "GET /courses-info"
+---
+
+This GET request retrieves a paginated list of course information from the /courses-info endpoint. It uses two query parameters where page specifies the page number of the results and limit defines the number of items returned per page.
+
+### Request Parameters
+
+<ParamField query="page" type="string">
+  Specify the exact page to retrieve subject information from. 
+</ParamField>
+
+<ParamField query="limit" type="string">
+  Specify the exact limit of items to display per page. 
+</ParamField>
