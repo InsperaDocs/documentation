@@ -93,7 +93,7 @@
             },
             {
                 "group": "Retrieve Institution Information",
-                "icon": "",
+                "icon": "graduation-cap",
                 "pages": [
                     "endpoints/institutioninfo"
                 ]
