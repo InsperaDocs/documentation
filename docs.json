@@ -16,13 +16,19 @@
             "dark": "#121212"
         }
     },
+    "search": {
+      "prompt": "Search endpoints..."
+    },
     "api": {
         "playground": {
             "display": "interactive",
             "proxy": false
         },
         "mdx": {
-            "server": "https://6x6hep4ey9.execute-api.eu-central-1.amazonaws.com/production",
+            "server": [
+            "https://6x6hep4ey9.execute-api.eu-central-1.amazonaws.com/production",
+            "https://ja0ot1lhh6.execute-api.eu-central-1.amazonaws.com/test"
+            ],
             "auth": {
                 "method": "bearer"
             }
