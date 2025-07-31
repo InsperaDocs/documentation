@@ -64,7 +64,7 @@
             "group": "Retrieve User Information",
             "icon": "user-round-search",
             "pages": [
-              "endpoints/useremial",
+              "endpoints/useremail",
               "endpoints/userpagination",
               "endpoints/userpaginationlimit"
             ]
