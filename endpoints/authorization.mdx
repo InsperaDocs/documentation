@@ -1,0 +1,17 @@
+---
+title: "Authorization"
+description: "Authorize to use the Inspera Originality API "
+---
+
+This POST request is used to obtain an authentication token. The token must be included in the header of subsequent requests to authorize access to other API endpoints.
+
+<ParamField body="clientId" type="string" required placeholder="Enter the clientId ">
+  The clientId is used to identify the client. 
+
+  <Warning>
+    The clientId will be provided by Inspera Originality. 
+  </Warning>
+  <ParamField body="institutionId" type="string" required placeholder="Enter the institutionId">
+    The institution is used to identify the corresponding institution for the client. 
+  </ParamField>
+</ParamField>
