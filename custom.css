@@ -1,0 +1,46 @@
+table {
+  width: 100%;
+  padding:10px;
+}
+
+td {
+  width:20%;
+}
+
+th {
+  text-align:left;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.flex-1.overflow-y-auto::-webkit-scrollbar {
+    display: none;  /* For Chrome, Safari, and other WebKit browsers */
+}
+
+.stable-scrollbar-gutter::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+
+#banner {
+background: #3F5EFB;
+background: radial-gradient(circle, rgba(63, 94, 251, 1) 24%, rgba(252, 70, 107, 1) 90%);
+}
+
+.max-w-xl {
+max-width: 76rem;
+}
+
+
+body, body * {
+  border-radius: 0 !important;
+}
+
+body *::before,
+body *::after {
+  border-radius: 0 !important;
+}
+
+.bg-codeblock {
+  border-radius: 0 !important;
+  box-shadow: none !important;  /* removes ring shadows */
+  outline: none !important;      /* removes outlines */
+}
