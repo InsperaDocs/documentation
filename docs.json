@@ -74,7 +74,7 @@
           },
           {
             "group": "Retrieve Subject Information",
-            "icon": "notebook",
+            "icon": "folder-tree",
             "pages": [
               "endpoints/coursecode",
               "endpoints/coursepagelimit"
