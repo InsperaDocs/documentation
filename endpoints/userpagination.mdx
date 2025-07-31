@@ -8,6 +8,11 @@ This **GET** request is used to retrieve user information from the system with s
 
 By default, each page returns up to **10 user records** unless otherwise specified by the API. The response contains the list of users for the specified page, along with `total`, `page`, `limit`, and `pages`.
 
+- **total** - Represents the total number of users available in the system.
+- **page** - Indicates the current page number being returned in the response. 
+- **limit** - The default limit `(10)` of user records shown per page the limit of user records shown per page. 
+- **pages** - Shows the total number of pages available based on the defined limit.
+
 ### Request Parameters
 
 <ParamField query="page" type="number" required placeholder="number">
