@@ -1,0 +1,15 @@
+---
+title: "User Info (Pagination)"
+description: "Retrieve a paginated list of system users. "
+api: "GET /user-info"
+---
+
+This **GET** request is used to retrieve user information from the system with support for pagination. By including the `page` query parameter, clients can specify which page of user records to fetch, enabling efficient navigation through large datasets.
+
+By default, each page returns up to **10 user records** unless otherwise specified by the API. The response contains the list of users for the specified page, along with `total`, `page`, `limit`, and `pages`.
+
+### Request Parameters
+
+<ParamField query="page" type="string" required placeholder="number">
+  Enter a description
+</ParamField>
