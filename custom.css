@@ -46,7 +46,7 @@ body *::after {
 }
 
 .nav-logo {
-  height: 2.5rem; /* Adjust as needed */
+  height: 4rem; /* Adjust as needed */
   width: auto;    /* Maintain aspect ratio */
   max-height: 100%;
 }
