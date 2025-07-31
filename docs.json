@@ -45,11 +45,25 @@
         "icon": "webhook",
         "groups": [
           {
-            "group": "API Calls",
-            "icon": "webhook",
+            "group": "Authorize",
+            "icon": "fingerprint",
             "pages": [
               "endpoints/authorization",
+              "endpoints/coursecode",
+              "endpoints/coursepagelimit"
+            ]
+          },
+          {
+            "group": "Create & Update Users",
+            "icon": "user-round-plus",
+            "pages": [
               "endpoints/createeducator",
+            ]
+          },
+          {
+            "group": "Retrieve Subject Information",
+            "icon": "notebook",
+            "pages": [
               "endpoints/coursecode",
               "endpoints/coursepagelimit"
             ]
