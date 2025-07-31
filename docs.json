@@ -54,7 +54,7 @@
             ]
           },
           {
-            "group": "Create, Update, and Users",
+            "group": "Create, Update, and Delete Users",
             "icon": "user-round-plus",
             "pages": [
               "endpoints/createeducator",
