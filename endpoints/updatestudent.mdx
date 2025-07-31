@@ -1,0 +1,33 @@
+---
+title: "Update Student"
+description: "Update an educator user. "
+api: "PUT /user-info"
+---
+
+**This PUT request** requires the `userId` as a query parameter in the URL to identify the specific student whose information will be updated.
+
+### Request Parameters
+
+<ParamField query="userId" type="string">
+  Specify the student user to update.
+</ParamField>
+
+<ParamField body="firstName" type="string">
+  Set a new first name for the student user.
+</ParamField>
+
+<ParamField body="firstName" type="string">
+  Set a new first name for the student user.
+</ParamField>
+
+<ParamField body="lastName" type="string">
+  Set a new last name for the student user.
+</ParamField>
+
+<ParamField body="email" type="string">
+  Set a new email for the student user.
+</ParamField>
+
+<ParamField body="status" type="number">
+  Set a new status for the student user. Use 1 for active status and 0 for inactive status.
+</ParamField>

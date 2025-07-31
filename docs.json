@@ -55,7 +55,8 @@
             "icon": "user-round-plus",
             "pages": [
               "endpoints/createeducator",
-              "endpoints/updateeducator"
+              "endpoints/updateeducator",
+              "endpoints/updatestudent"
             ]
           },
           {
