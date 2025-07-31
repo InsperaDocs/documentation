@@ -4,10 +4,14 @@ description: "Retrieve user information via email."
 api: "GET /user-info"
 ---
 
-This **GET** request allows you to retrieve user information based on their email address. By passing the user's email as a query parameter, the endpoint returns detailed data associated with that specific user. 
+This **GET** request allows you to retrieve user information based on their email address. By passing the user's email as a query parameter, the endpoint returns detailed data associated with that specific user.
 
 ### Request Parameters
 
-<ParamField query="email" type="string" required>
-  Enter the user's email. 
+<ParamField query="email" type="string" required={false}>
+  Enter the user's email.
 </ParamField>
+
+<Warning>
+  Ensure the email is associated with an active user in the system. 
+</Warning>
