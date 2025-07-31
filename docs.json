@@ -98,9 +98,11 @@
         "light": "logo/logo2.png",
         "dark": "logo/logo2.png"
     },
-    "primary": {
+    "navbar": {
+        "primary": {
         "type": "button",
         "label": "Help Center",
         "href": "https://support.inspera.com/hc/en-us/categories/15848147005085-Inspera-Originality"
+    }
     }
 }
