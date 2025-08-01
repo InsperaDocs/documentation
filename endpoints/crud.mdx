@@ -2,9 +2,10 @@
 title: "Authorization (CRUD)"
 description: "Description of your new file."
 api: "POST /token"
+authMethod: basic
 ---
 
-<ParamField body="email" type="string" required>
+<ParamField body="email" type="string" required={false}>
   Enter a description
 </ParamField>
 
@@ -16,6 +17,6 @@ api: "POST /token"
   Enter a description
 </ParamField>
 
-<ParamField path="institutionId" type="string">
+<ParamField body="institutionId" type="string">
   Enter a description
 </ParamField>
