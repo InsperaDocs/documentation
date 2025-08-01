@@ -64,6 +64,15 @@
                 ]
             },
             {
+              "group": "Upload Document & Retrieve Information", 
+              "icon": "file-up",
+              "pages": [
+                "endpoints/upload",
+                "endpoints/checkstatus",
+                "endpoints/reporturl"
+              ]
+            },
+            {
                 "group": "Create, Update, and Delete Users",
                 "icon": "user-round-plus",
                 "pages": [

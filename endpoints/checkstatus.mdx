@@ -1,0 +1,13 @@
+---
+title: "Check Status"
+description: "Check the status of an uploaded document. "
+api: "GET /checkstatus"
+---
+
+This GET request checks the status of a document. Use the endpoint shown in the request example and include the documentId, which you received from the previous response, as a path parameter. This is a manual process that returns the current status of the specified document.
+
+The only requirement for this request is the `documentId` in the path. This ID matches the identifier returned when the document was first uploaded using the [upload ](/endpoints/upload)endpoint.
+
+<ParamField path="documentId" type="string" required>
+  Enter a description
+</ParamField>
