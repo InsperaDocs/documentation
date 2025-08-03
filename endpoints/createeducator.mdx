@@ -24,6 +24,10 @@ This API call creates a new educator user on the platform. You must specify the 
   Enter the email for the new educator.
 </ParamField>
 
-<ParamField body="status" type="number" required={false}>
+<ParamField body="status" type="number" required="false">
   Enter the status for the new eduactor. Use `1` for active status and `0` for inactive status.
+</ParamField>
+
+<ParamField body="courses" type="string[]">
+  Define the courses for the new educator using the corresponding course ID. 
 </ParamField>
