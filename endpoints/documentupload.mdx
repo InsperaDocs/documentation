@@ -1,5 +1,79 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Document Upload"
+description: "Upload a document via API"
 ---
 
+This POST request initiates the document similarity check. The endpoint acts as the entry point for the system to process and analyze the submitted document. The response will include a `message`, `documentId`, and `presignedS3Url` where the document should be uploaded.
+
+### Request Parameters
+
+When making a request, only four parameters are required, and the rest are optional to include as needed.
+
+#### Required Parameters
+
+<ParamField body="documentTitle" type="string" required>
+  The title of the document that will be uploaded.
+</ParamField>
+
+<ParamField body="author" type="string" required>
+  The name of the document’s author.
+</ParamField>
+
+<ParamField body="email" type="string" required>
+  The email of the document's author. 
+</ParamField>
+
+<ParamField body="docType" type="string" required>
+Document type that is being uploaded. 
+
+  <Expandable title="Supported Types">
+     Document type that is being uploaded. Supported types:
+
+  - `application/pdf` or `.pdf` (PDF files)
+
+  - `text/plain` or `.txt` (Plain text files)
+
+  - `text/html` or `.html` (HTML files)
+
+  - `application/xml` or `.xml` (XML files)
+
+  - `application/msword`, `application/doc`, `application/ms-doc`, or `.doc`
+
+  - `application/vnd.openxmlformats-officedocument.wordprocessingml.document`, `word`, `docx`, or `.docx` 
+
+  - `application/vnd.oasis.opendocument.text` or `.odt`
+
+  - `application/rtf` or `.rtf`
+
+  - `application/wordperfect` or `.wpd`
+
+  - `application/postscript` or `.ps`
+
+  - `application/vnd.apple.pages` or `.pages`
+
+  - `application/vnd.ms-powerpoint`, `application/mspowerpoint`, `application/powerpoint`, `application/x-mspowerpoint`, or `.ppt` 
+
+  - `application/vnd.openxmlformats-officedocument.presentationml.presentation` or `.pptx` 
+
+  - `application/vnd.openxmlformats-officedocument.presentationml.slideshow` or `.ppsx`
+
+  - `application/vnd.oasis.opendocument.presentation` or `.odp`
+
+  - `application/vnd.apple.keynote` or `.key` 
+
+  - `application/vnd.ms-excel`, `application/excel`, `application/x-excel`, `application/x-msexcel`, or `.xls` (Excel 97-2003 files)
+
+  - `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet` or `.xlsx` 
+
+  - `application/vnd.oasis.opendocument.spreadsheet` or `.ods`
+
+  - `application/vnd.apple.numbers` or `.numbers`
+
+  - `application/json` or `.json`
+
+  - `text/csv` or `.csv` 
+
+  - `.md` 
+  </Expandable>
+ 
+</ParamField>
