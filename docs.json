@@ -67,7 +67,8 @@
                 "group": "Authorize (CRUD)",
                 "icon": "fingerprint",
                 "pages": [
-                    "endpoints/authorizationcrud"
+                    "endpoints/authorizationcrud",
+                    "endpoints/reporturl"
                 ]
             },
             {
