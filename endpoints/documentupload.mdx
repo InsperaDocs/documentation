@@ -114,20 +114,26 @@ When making a request, only four parameters are required, and the rest are optio
   Enable to check for potential contextual similarity.
 </ParamField>
 
-<ParamField body="sentenceThresholds" type="string[]">
+<ParamField body="sentenceThresholds" type="object">
   Define the percentage at which a sentence is considered contextually similar.
 
-  `"contextualSimilaritiesThreshold": 65 `
+  `"contextualSimilaritiesThreshold": 65`
+
+  ```json Example icon=webhook
+  "sentenceThresholds": {
+  "contextualSimilaritiesThreshold": 65
+  }
+  ```
 
   <Warning>
-    We recommend using the default contextual similarity threshold for optimal results. 
+    We recommend using the default contextual similarity threshold for optimal results.
   </Warning>
 </ParamField>
 
 <ParamField body="sources" type="object">
-  Define sources to include or exclude form the document originality check. 
+  Define sources to include or exclude form the document originality check.
 
-  ```json Example icon={webhook}
+  ```json Example icon=webhook
   "sources": {
     "includeSources": [
       "https://example.com/source1",
