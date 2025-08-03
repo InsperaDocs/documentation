@@ -8,9 +8,9 @@ authMethod: "none"
 To interact with the CRUD API, clients must first acquire an access token. This is done by submitting a POST request to the token endpoint, including the user's credentials. Upon successful validation of the provided email and password, the API will return an authentication token, which must be included in the header of all future requests.
 
 <ParamField body="email" type="string" required>
-  Enter your account email. 
+  Enter your account email.
 </ParamField>
 
-<ParamField path="param" type="string">
-  Enter your account password. 
+<ParamField body="password" type="string" required>
+  Enter your account password.
 </ParamField>
