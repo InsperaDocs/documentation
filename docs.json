@@ -57,17 +57,18 @@
               ]
             },
             {
-                "group": "Authorize",
-                "icon": "fingerprint",
-                "pages": [
-                    "endpoints/authorization"
-                ]
+              "group": "Authorization",
+              "icon": "fingerprint",
+              "pages": [
+                "endpoints/authorization",
+                "endpoints/authorizecrud"
+              ]
             },
             {
-                "group": "Authorize (CRUD)",
+                "group": "Document Upload & Information",
                 "icon": "fingerprint",
                 "pages": [
-                    "endpoints/authorizationcrud",
+                    "endpoints/documentupload",
                     "endpoints/reporturl",
                     "endpoints/checkstatus"
                 ]
