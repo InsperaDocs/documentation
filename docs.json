@@ -61,7 +61,7 @@
               "icon": "fingerprint",
               "pages": [
                 "endpoints/authorization",
-                "endpoints/authorizecrud"
+                "endpoints/authorizationcrud"
               ]
             },
             {
