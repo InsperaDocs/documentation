@@ -72,8 +72,9 @@
                 "icon": "fingerprint",
                 "pages": [
                     "endpoints/documentupload",
-                    "endpoints/reporturl",
-                    "endpoints/checkstatus"
+                    "endpoints/checkstatus",
+                    "endpoints/reporturl"
+
                 ]
             },
             {
