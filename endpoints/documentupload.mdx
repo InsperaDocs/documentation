@@ -134,12 +134,12 @@ When making a request, only four parameters are required, and the rest are optio
   Define sources to include or exclude form the document originality check.
 
   ```json Example icon=webhook
-  "sources": {
-    "includeSources": [
-      "https://example.com/source1",
+  "sources": { // object
+    "includeSources": [ //array
+      "https://example.com/source1", 
       "https://example.org/source2"
     ],
-    "excludeSources": [
+    "excludeSources": [ //array
       "https://exclude.com/sourceA",
       "https://exclude.org/sourceB"
     ]
