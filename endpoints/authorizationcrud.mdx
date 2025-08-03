@@ -2,7 +2,6 @@
 title: "Authorisation (CRUD)"
 description: "Authorise to use create, read, update, and delete. "
 api: "POST /token"
-authMethod: "none"
 ---
 
 To interact with the CRUD API, clients must first acquire an access token. This is done by submitting a POST request to the token endpoint, including the user's credentials. Upon successful validation of the provided email and password, the API will return an authentication token, which must be included in the header of all future requests.
