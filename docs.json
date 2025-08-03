@@ -64,6 +64,13 @@
                 ]
             },
             {
+                "group": "Authorize (CRUD)",
+                "icon": "fingerprint",
+                "pages": [
+                    "endpoints/authorizationcrud"
+                ]
+            },
+            {
                 "group": "Create, Update, and Delete Users",
                 "icon": "user-round-plus",
                 "pages": [
