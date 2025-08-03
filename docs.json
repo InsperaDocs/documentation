@@ -68,7 +68,8 @@
                 "icon": "fingerprint",
                 "pages": [
                     "endpoints/authorizationcrud",
-                    "endpoints/reporturl"
+                    "endpoints/reporturl",
+                    "endpoints/checkstatus"
                 ]
             },
             {
