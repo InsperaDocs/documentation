@@ -1,6 +1,6 @@
 ---
-title: "Create Educator"
-description: "Create a new educator user."
+title: "Create User"
+description: "Create and add a new user in the system. "
 api: "POST /user"
 ---
 
@@ -9,15 +9,15 @@ This API call creates a new educator user on the platform. You must specify the 
 ### Request Parameters
 
 <ParamField body="firstName" type="string" required>
-  Enter the name for the new educator.
+  Enter the name for the new user
 </ParamField>
 
 <ParamField body="lastName" type="string" required>
-  Enter the last name for the new educator.
+  Enter the last name for the new user
 </ParamField>
 
 <ParamField body="role" type="string" required>
-  Assign `educator` as the role for the new user.
+  Assign `educator` or `student` as the role for the new user.
 </ParamField>
 
 <ParamField body="email" type="string" required>
@@ -25,9 +25,9 @@ This API call creates a new educator user on the platform. You must specify the 
 </ParamField>
 
 <ParamField body="status" type="number" required="false">
-  Enter the status for the new eduactor. Use `1` for active status and `0` for inactive status.
+  Enter the status for the new user Use `1` for active status and `0` for inactive status.
 </ParamField>
 
-<ParamField body="courses" type="string[]">
-  Define the courses for the new educator using the corresponding course ID. 
+<ParamField body="courses" type="string[]" required>
+  Specify the subjects for the new user using the corresponding subject IDs.
 </ParamField>

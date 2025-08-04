@@ -75,7 +75,6 @@
                 "pages": [
                     "endpoints/authorizationcrud",
                     "endpoints/createeducator",
-                    "endpoints/createstudent",
                     "endpoints/updateeducator",
                     "endpoints/updatestudent",
                     "endpoints/deleteuser",
