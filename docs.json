@@ -1,6 +1,6 @@
 {
     "$schema": "https://mintlify.com/docs.json",
-    "theme": "aspen",
+    "theme": "mint",
     "name": "Inspera Originality API",
     "colors": {
         "primary": "#3D74B6",
@@ -11,6 +11,7 @@
         "codeblocks": "system"
     },
     "background": {
+        "decoration": "gradient",
         "color": {
             "light": "#ffffff",
             "dark": "#121212"
