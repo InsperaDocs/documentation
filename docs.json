@@ -11,7 +11,7 @@
         "codeblocks": "system"
     },
     "background": {
-        "decoration": "gradient",
+        "decoration": "windows",
         "color": {
             "light": "#ffffff",
             "dark": "#121212"
