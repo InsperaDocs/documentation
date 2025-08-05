@@ -11,10 +11,9 @@
         "codeblocks": "system"
     },
     "background": {
-        "decoration": "windows",
         "color": {
             "light": "#ffffff",
-            "dark": "#121212"
+            "dark": "#181818"
         }
     },
     "search": {
