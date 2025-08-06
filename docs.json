@@ -3,8 +3,8 @@
     "theme": "mint",
     "name": "Inspera Originality API",
     "colors": {
-        "primary": "#FF0B55",
-        "light": "#3D74B6",
+        "primary": "#FF8040",
+        "light": "#7ADAA5",
         "dark": "#FF8040"
     },
     "styling": {
