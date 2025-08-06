@@ -3,9 +3,9 @@
     "theme": "mint",
     "name": "Inspera Originality API",
     "colors": {
-        "primary": "#000000",
-        "light": "#000000",
-        "dark": "#ffffff"
+        "primary": "#FFBC4C",
+        "light": "#FFBC4C",
+        "dark": "#799EFF"
     },
     "styling": {
         "codeblocks": "dark"
