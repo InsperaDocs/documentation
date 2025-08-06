@@ -11,6 +11,7 @@
         "codeblocks": "system"
     },
     "background": {
+      "decoration": "grid",
         "color": {
             "light": "#ffffff",
             "dark": "#181818"
