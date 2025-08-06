@@ -3,12 +3,12 @@
     "theme": "mint",
     "name": "Inspera Originality API",
     "colors": {
-        "primary": "#FF8040",
-        "light": "#7ADAA5",
-        "dark": "#FF8040"
+        "primary": "#000000",
+        "light": "#000000",
+        "dark": "#ffffff"
     },
     "styling": {
-        "codeblocks": "system"
+        "codeblocks": "dark"
     },
     "background": {
       "decoration": "grid",
