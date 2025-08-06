@@ -5,7 +5,7 @@
     "colors": {
         "primary": "#FF0B55",
         "light": "#3D74B6",
-        "dark": "#FF0B55"
+        "dark": "#FF8040"
     },
     "styling": {
         "codeblocks": "system"
