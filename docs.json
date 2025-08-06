@@ -3,9 +3,9 @@
     "theme": "aspen",
     "name": "Inspera Originality API",
     "colors": {
-        "primary": "#FFBC4C",
-        "light": "#FFBC4C",
-        "dark": "#799EFF"
+        "primary": "#FF0B55",
+        "light": "#FF0B55",
+        "dark": "#FF0B55"
     },
     "styling": {
         "codeblocks": "system"
