@@ -1,11 +1,19 @@
 ---
 title: "Document Status Check"
-api: "GET /document/{documentId}/checkStatus/"
+api: "GET /{document}/{documentId}/{checkStatus}"
 description: "Check the status of the document uploaded via /create/submission."
 ---
 
 This endpoint retrieves the current status of a document identified by `documentId`. The `documentId` must be provided as a path parameter, immediately following `/document/` and preceding `/checkStatus`.
 
+<ParamField path="document" type="string" required>
+  Enter `documentId` as a path parameter.
+</ParamField>
+
 <ParamField path="documentId" type="string" required>
+  Enter `documentId` as a path parameter.
+</ParamField>
+
+<ParamField path="checkStatus" type="string" required>
   Enter `documentId` as a path parameter.
 </ParamField>
