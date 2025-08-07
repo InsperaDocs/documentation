@@ -38,12 +38,12 @@
         }
     },
     "fonts": {
-        "family": "Roboto Mono",
+        "family": "IBM Plex Sans",
         "heading": {
-            "family": "Roboto Mono"
+            "family": "IBM Plex Sans"
         },
         "body": {
-            "family": "Roboto Mono"
+            "family": "IBM Plex Sans"
         }
     },
     "icons": {
