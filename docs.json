@@ -81,28 +81,43 @@
                     }
                 ]
             },
-            {
-                "tab": "Upload API Endpoints",
-                "groups": [
-                    {
-                        "group": "Environments",
-                        "icon": "codesandbox",
-                        "pages": [
-                            "endpoints/sameurls"
-                        ]
-                    },
-                    {
-                        "group": "API Endpoints",
-                        "icon": "webhook",
-                        "pages": [
-                            "endpoints/authorization",
-                            "endpoints/documentupload",
-                            "endpoints/checkstatus",
-                            "endpoints/reporturl"
-                        ]
-                    }
-                ]
-            }
+          {
+  "tab": "Upload API Endpoints",
+  "menu": [
+    {
+      "item": "API References",
+      "icon": "rocket",
+      "groups": [
+        {
+          "group": "API Reference",
+          "icon": "square-terminal",
+          "pages": [
+            "api-reference/get",
+            "api-reference/post",
+            "api-reference/delete"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "Environments",
+      "icon": "codesandbox",
+      "pages": [
+        "endpoints/sameurls"
+      ]
+    },
+    {
+      "item": "API Endpoints",
+      "icon": "webhook",
+      "pages": [
+        "endpoints/authorization",
+        "endpoints/documentupload",
+        "endpoints/checkstatus",
+        "endpoints/reporturl"
+      ]
+    }
+  ]
+}
         ]
     },
     "logo": {
