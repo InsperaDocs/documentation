@@ -38,12 +38,12 @@
         }
     },
     "fonts": {
-        "family": "IBM Plex Sans",
+        "family": "Mozilla Text",
         "heading": {
-            "family": "IBM Plex Sans"
+            "family": "Mozilla Text"
         },
         "body": {
-            "family": "IBM Plex Sans"
+            "family": "Mozilla Text"
         }
     },
     "icons": {
