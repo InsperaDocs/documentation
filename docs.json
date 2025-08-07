@@ -38,12 +38,12 @@
         }
     },
     "fonts": {
-        "family": "Space Grotesk",
+        "family": "Roboto Mono",
         "heading": {
-            "family": "Space Grotesk"
+            "family": "Roboto Mono"
         },
         "body": {
-            "family": "Space Grotesk"
+            "family": "Roboto Mono"
         }
     },
     "icons": {
