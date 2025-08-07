@@ -51,40 +51,56 @@
     },
     "favicon": "/logo3.png",
     "navigation": {
-        "groups": [
+        "tabs": [
             {
-                "group": "Environments",
-                "icon": "codesandbox",
-                "pages": [
-                    "endpoints/environments"
+                "tab": "CRUD API Endpoints",
+                "groups": [
+                    {
+                        "group": "Environments",
+                        "icon": "codesandbox",
+                        "pages": [
+                            "endpoints/environments"
+                        ]
+                    },
+                    {
+                        "group": "CRUD API Endpoints",
+                        "icon": "webhook",
+                        "pages": [
+                            "endpoints/authorizationcrud",
+                            "endpoints/createeducator",
+                            "endpoints/updateeducator",
+                            "endpoints/updatestudent",
+                            "endpoints/deleteuser",
+                            "endpoints/useremail",
+                            "endpoints/userpagination",
+                            "endpoints/userpaginationlimit",
+                            "endpoints/coursecode",
+                            "endpoints/coursepagelimit",
+                            "endpoints/institutioninfo"
+                        ]
+                    }
                 ]
             },
             {
-                "group": "API Endpoints",
-                "icon": "webhook",
-                "pages": [
-                    "endpoints/authorization",
-                    "endpoints/documentupload",
-                    "endpoints/checkstatus",
-                    "endpoints/reporturl"
-                ]
-            },
-            {
-                "group": "CRUD API Endpoints",
-                "icon": "webhook",
-                "pages": [
-                    "endpoints/authorizationcrud",
-                    "endpoints/createeducator",
-                    "endpoints/updateeducator",
-                    "endpoints/updatestudent",
-                    "endpoints/deleteuser",
-                    "endpoints/useremail",
-                    "endpoints/userpagination",
-                    "endpoints/userpaginationlimit",
-                    "endpoints/coursecode",
-                    "endpoints/coursepagelimit",
-                    "endpoints/institutioninfo"
-
+                "tab": "Upload API Endpoints",
+                "groups": [
+                    {
+                        "group": "Environments",
+                        "icon": "codesandbox",
+                        "pages": [
+                            "endpoints/environments"
+                        ]
+                    },
+                    {
+                        "group": "API Endpoints",
+                        "icon": "webhook",
+                        "pages": [
+                            "endpoints/authorization",
+                            "endpoints/documentupload",
+                            "endpoints/checkstatus",
+                            "endpoints/reporturl"
+                        ]
+                    }
                 ]
             }
         ]
