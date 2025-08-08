@@ -38,16 +38,16 @@
         }
     },
     "fonts": {
-        "family": "Mozilla Text",
+        "family": "Space Grotesk",
         "heading": {
-            "family": "Mozilla Text"
+            "family": "Space Grotesk"
         },
         "body": {
-            "family": "Mozilla Text"
+            "family": "Space Grotesk"
         }
     },
     "icons": {
-        "library": "fontawesome"
+        "library": "lucide"
     },
     "favicon": "/logo3.png",
     "navigation": {
