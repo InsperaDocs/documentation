@@ -58,6 +58,7 @@
                     {
                         "group": "Environments",
                         "icon": "codesandbox",
+                        "color": #FF0B55,
                         "pages": [
                             "endpoints/environments"
                         ]
