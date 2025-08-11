@@ -7,6 +7,20 @@
         "light": "#FF0B55",
         "dark": "#FF0B55"
     },
+    {
+ "contextual": {
+   "options": [
+     "copy",
+     "view",
+     "chatgpt",
+     "claude",
+     "perplexity",
+     "mcp",
+     "cursor",
+     "vscode"
+   ]
+ }
+},
     "styling": {
         "codeblocks": "system"
     },
