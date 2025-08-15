@@ -2,6 +2,7 @@
 title: "Document Status Check"
 api: "GET /{document}/{documentId}/{checkStatus}"
 description: "Check the status of the document uploaded via /create/submission."
+authMethod: "bearer"
 ---
 
 This endpoint retrieves the current status of a document identified by `documentId`. The `documentId` must be provided as a path parameter, immediately following `/document/` and preceding `/checkStatus`.

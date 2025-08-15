@@ -2,6 +2,7 @@
 title: "Create Submission "
 description: "Upload a document via API"
 api: "POST /create/submission"
+authMethod: "bearer"
 ---
 
 This POST request initiates the document similarity check. The endpoint acts as the entry point for the system to process and analyze the submitted document. The response will include a `message`, `documentId`, and `presignedS3Url` where the document should be uploaded.
