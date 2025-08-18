@@ -42,8 +42,7 @@
         "mdx": {
             "server": [
                 "https://6x6hep4ey9.execute-api.eu-central-1.amazonaws.com/production",
-                "https://ja0ot1lhh6.execute-api.eu-central-1.amazonaws.com/test",
-              "https://d252tz0djuu42k.cloudfront.net"
+                "https://ja0ot1lhh6.execute-api.eu-central-1.amazonaws.com/test"
             ],
             "auth": {
                 "method": "bearer"
