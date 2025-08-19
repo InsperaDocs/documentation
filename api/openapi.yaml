@@ -51,9 +51,9 @@ paths:
               schema:
                 type: object
                 properties:
-                  access_token:
+                  token:
                     type: string
-                  expires_in:
+                  expirationTime:
                     type: integer
 
   /login:
