@@ -297,13 +297,13 @@ paths:
     post:
       tags:
         - Upload
-      summary: Upload submission document
+      summary: Create a submission and get the presigned URL
       security:
         - OriginalityBearerAuth: []
       requestBody:
         required: true
         content:
-          multipart/form-data:
+          application/json:
             schema:
               type: object
               properties:
@@ -350,7 +350,18 @@ paths:
                 - docType
       responses:
         '201':
-          description: Submission created
+          description: Submission created and presigned URL returned
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  documentId:
+                    type: string
+                  presignedS3Url:
+                    type: string
+                  message:
+                    type: string
 
   /{document}/{documentId}/checkStatus:
     get:
