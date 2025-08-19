@@ -1,7 +1,10 @@
 openapi: 3.0.3
 info:
   title: Inspera Originality API
-  version: 1.2.0
+  version: 1.2.1
+  description: >
+    This API allows interaction with Inspera Originality, including user management, course and institution info, 
+    and document submissions for originality checks.
 
 servers:
   - url: https://6x6hep4ey9.execute-api.eu-central-1.amazonaws.com/production
@@ -15,12 +18,12 @@ components:
       type: http
       scheme: bearer
       bearerFormat: JWT
-      description: Use token from `/login` for CRUD operations (users, courses, institutions).
+      description: Use the token obtained from `/login` for CRUD operations (users, courses, institutions)
     OriginalityBearerAuth:
       type: http
       scheme: bearer
       bearerFormat: JWT
-      description: Use token from `/token` for document submission & originality reports.
+      description: Use the token obtained from `/token` for document submissions and originality reports
 
 paths:
   /token:
@@ -28,6 +31,7 @@ paths:
       tags:
         - Upload
       summary: Authorization
+      description: Generate a token to access upload endpoints.
       security: []
       requestBody:
         required: true
@@ -38,8 +42,10 @@ paths:
               properties:
                 clientId:
                   type: string
+                  description: "Your client identifier provided by Inspera Originality"
                 institutionId:
                   type: string
+                  description: "Identifier for your institution"
               required:
                 - clientId
                 - institutionId
@@ -53,14 +59,17 @@ paths:
                 properties:
                   token:
                     type: string
+                    description: "JWT token to be used in Authorization header"
                   expirationTime:
                     type: integer
+                    description: "Token expiration time in seconds"
 
   /login:
     post:
       tags:
         - CRUD
       summary: Authorization (CRUD)
+      description: Generate a token for CRUD endpoints.
       security: []
       requestBody:
         required: true
@@ -71,8 +80,10 @@ paths:
               properties:
                 email:
                   type: string
+                  description: "Your account email for CRUD access"
                 password:
                   type: string
+                  description: "Your account password"
               required:
                 - email
                 - password
@@ -86,14 +97,17 @@ paths:
                 properties:
                   access_token:
                     type: string
+                    description: "JWT token to be used in Authorization header"
                   expires_in:
                     type: integer
+                    description: "Token expiration time in seconds"
 
   /user:
     post:
       tags:
         - CRUD
       summary: Create User
+      description: Create a new educator or student user in the system.
       security:
         - CrudBearerAuth: []
       requestBody:
@@ -105,19 +119,25 @@ paths:
               properties:
                 firstName:
                   type: string
+                  description: "User's first name"
                 lastName:
                   type: string
+                  description: "User's last name"
                 email:
                   type: string
+                  description: "User's email address"
                 role:
                   type: string
                   enum: [educator, student]
+                  description: "Role of the user"
                 status:
                   type: number
+                  description: "Set 1 for active, 0 for inactive (optional)"
                 courses:
                   type: array
                   items:
                     type: string
+                  description: "List of course IDs assigned to the user"
               required:
                 - firstName
                 - lastName
@@ -126,29 +146,32 @@ paths:
                 - courses
       responses:
         '201':
-          description: User created
+          description: User successfully created
 
     delete:
       tags:
         - CRUD
       summary: Delete User
+      description: Remove a user from the system by userId.
       security:
         - CrudBearerAuth: []
       parameters:
         - in: query
           name: userId
           required: true
+          description: "The unique ID of the user to delete"
           schema:
             type: string
       responses:
         '200':
-          description: User deleted
+          description: User deleted successfully
 
   /user-info:
     get:
       tags:
         - CRUD
       summary: User Info
+      description: Retrieve user information by email or paginated list.
       security:
         - CrudBearerAuth: []
       parameters:
@@ -156,26 +179,69 @@ paths:
           name: email
           schema:
             type: string
-          description: Retrieve user by email
+          description: "Retrieve user information by email (optional)"
         - in: query
           name: page
           schema:
             type: number
-          description: Pagination page number
+          description: "Page number for paginated results (optional)"
         - in: query
           name: limit
           schema:
             type: number
-          description: Pagination limit
+          description: "Number of users per page (optional)"
       responses:
         '200':
           description: User info retrieved
+
+    put:
+      tags:
+        - CRUD
+      summary: Update User
+      description: Update details of an educator or student.
+      security:
+        - CrudBearerAuth: []
+      parameters:
+        - in: query
+          name: userId
+          required: true
+          description: "The ID of the user to update"
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                firstName:
+                  type: string
+                  description: "New first name"
+                lastName:
+                  type: string
+                  description: "New last name"
+                email:
+                  type: string
+                  description: "New email address"
+                status:
+                  type: number
+                  description: "Set 1 for active, 0 for inactive"
+                userSubjects:
+                  type: array
+                  items:
+                    type: string
+                  description: "Updated subject codes for educators (optional for students)"
+      responses:
+        '200':
+          description: User updated successfully
 
   /courses-info:
     get:
       tags:
         - CRUD
       summary: Subject Info
+      description: Retrieve course information by code or paginated list.
       security:
         - CrudBearerAuth: []
       parameters:
@@ -183,15 +249,17 @@ paths:
           name: courseCode
           schema:
             type: string
-          description: Retrieve course by code
+          description: "Unique course identifier to retrieve specific info (optional)"
         - in: query
           name: page
           schema:
             type: string
+          description: "Page number for paginated results (optional)"
         - in: query
           name: limit
           schema:
             type: string
+          description: "Limit of items per page (optional)"
       responses:
         '200':
           description: Course info retrieved
@@ -201,12 +269,14 @@ paths:
       tags:
         - CRUD
       summary: Institution Info
+      description: Retrieve institution information including faculties and departments.
       security:
         - CrudBearerAuth: []
       parameters:
         - in: path
           name: institution-info
           required: true
+          description: "Path to retrieve detailed institution info"
           schema:
             type: string
       responses:
@@ -218,6 +288,7 @@ paths:
       tags:
         - Upload
       summary: Create Submission
+      description: Create a submission entry and receive a presigned S3 URL for upload.
       security:
         - OriginalityBearerAuth: []
       requestBody:
@@ -229,40 +300,57 @@ paths:
               properties:
                 documentTitle:
                   type: string
+                  description: "Title of the document"
                 author:
                   type: string
+                  description: "Author of the document"
                 email:
                   type: string
+                  description: "Author's email address"
                 docType:
                   type: string
+                  description: "Document type (pdf, docx, txt, etc.)"
                 translatedLanguage:
                   type: array
                   items:
                     type: string
+                  description: "Languages for translated similarity check (optional)"
                 assignmentId:
                   type: string
+                  description: "Assignment ID associated with submission (optional)"
                 institutionName:
                   type: string
+                  description: "Name of the institution (optional)"
                 enableAIDetection:
                   type: boolean
+                  description: "Enable AI detection (optional)"
                 enableReferenceDetection:
                   type: boolean
+                  description: "Enable reference detection (optional, default true)"
                 reSubmissions:
                   type: number
+                  description: "Number of allowed resubmissions (optional)"
                 subjectId:
                   type: string
+                  description: "Subject ID for the submission (optional)"
                 maxLimit:
                   type: number
+                  description: "Maximum word count allowed (optional)"
                 archive:
                   type: boolean
+                  description: "Whether to archive submission for collusion detection (optional)"
                 enableContextSimilarity:
                   type: boolean
+                  description: "Enable contextual similarity check (optional)"
                 sentenceThresholds:
                   type: object
+                  description: "Threshold settings for contextual similarity (optional)"
                 sources:
                   type: object
+                  description: "Include or exclude specific sources (optional)"
                 sourcesThreshold:
                   type: number
+                  description: "Exclude sources below this percentage threshold (optional)"
               required:
                 - documentTitle
                 - author
@@ -278,51 +366,60 @@ paths:
                 properties:
                   documentId:
                     type: string
+                    description: "ID of the created document"
                   presignedS3Url:
                     type: string
+                    description: "URL to upload the document"
                   message:
                     type: string
+                    description: "Status message"
 
   /{document}/{documentId}/checkStatus:
     get:
       tags:
         - Upload
       summary: Check Submission Status
+      description: Get the current status of a document submission.
       security:
         - OriginalityBearerAuth: []
       parameters:
         - in: path
           name: document
           required: true
+          description: "Path parameter placeholder (use 'document')"
           schema:
             type: string
         - in: path
           name: documentId
           required: true
+          description: "The document ID to check"
           schema:
             type: string
       responses:
         '200':
-          description: Status retrieved
+          description: Submission status retrieved
 
   /document/{documentId}/mode/{mode}:
     get:
       tags:
         - Upload
       summary: Retrieve Report URL
+      description: Get the URL to view or edit the originality report for a submission.
       security:
         - OriginalityBearerAuth: []
       parameters:
         - in: path
           name: documentId
           required: true
+          description: "ID of the document"
           schema:
             type: string
         - in: path
           name: mode
           required: true
+          description: "Report mode: 'view' or 'edit'"
           schema:
             type: string
       responses:
         '200':
-          description: Report URL retrieved
+          description: Originality report URL retrieved
