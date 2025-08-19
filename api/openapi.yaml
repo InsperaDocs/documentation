@@ -27,7 +27,7 @@ paths:
     post:
       tags:
         - Upload
-      summary: Obtain Originality API authentication token
+      summary: Authorization
       security: []
       requestBody:
         required: true
@@ -60,7 +60,7 @@ paths:
     post:
       tags:
         - CRUD
-      summary: Obtain CRUD API authentication token
+      summary: Authorization (CRUD)
       security: []
       requestBody:
         required: true
@@ -93,7 +93,7 @@ paths:
     post:
       tags:
         - CRUD
-      summary: Create new user
+      summary: Create User
       security:
         - CrudBearerAuth: []
       requestBody:
@@ -131,7 +131,7 @@ paths:
     delete:
       tags:
         - CRUD
-      summary: Delete user
+      summary: Delete User
       security:
         - CrudBearerAuth: []
       parameters:
@@ -148,7 +148,7 @@ paths:
     get:
       tags:
         - CRUD
-      summary: Retrieve user information
+      summary: User Info (Email)
       security:
         - CrudBearerAuth: []
       parameters:
@@ -156,6 +156,34 @@ paths:
           name: email
           schema:
             type: string
+      responses:
+        '200':
+          description: User info retrieved
+
+  /user-info:
+    get:
+      tags:
+        - CRUD
+      summary: User Info (Page)
+      security:
+        - CrudBearerAuth: []
+      parameters:
+        - in: query
+          name: page
+          schema:
+            type: number
+      responses:
+        '200':
+          description: User info retrieved
+
+  /user-info:
+    get:
+      tags:
+        - CRUD
+      summary: User Info (Page & Limit)
+      security:
+        - CrudBearerAuth: []
+      parameters:
         - in: query
           name: page
           schema:
@@ -167,72 +195,12 @@ paths:
       responses:
         '200':
           description: User info retrieved
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    id:
-                      type: string
-                    firstName:
-                      type: string
-                    lastName:
-                      type: string
-                    email:
-                      type: string
-                    role:
-                      type: string
-                    status:
-                      type: number
-                    courses:
-                      type: array
-                      items:
-                        type: string
-
-    put:
-      tags:
-        - CRUD
-      summary: Update user
-      security:
-        - CrudBearerAuth: []
-      parameters:
-        - in: query
-          name: userId
-          schema:
-            type: string
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                firstName:
-                  type: string
-                lastName:
-                  type: string
-                email:
-                  type: string
-                role:
-                  type: string
-                  enum: [educator, student]
-                status:
-                  type: number
-                courses:
-                  type: array
-                  items:
-                    type: string
-      responses:
-        '200':
-          description: User updated
 
   /courses-info:
     get:
       tags:
         - CRUD
-      summary: Retrieve course information
+      summary: Subject Info (Course Code)
       security:
         - CrudBearerAuth: []
       parameters:
@@ -240,6 +208,18 @@ paths:
           name: courseCode
           schema:
             type: string
+      responses:
+        '200':
+          description: Course info retrieved
+
+  /courses-info:
+    get:
+      tags:
+        - CRUD
+      summary: Subject Info (Page & Limit)
+      security:
+        - CrudBearerAuth: []
+      parameters:
         - in: query
           name: page
           schema:
@@ -251,25 +231,12 @@ paths:
       responses:
         '200':
           description: Course info retrieved
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    id:
-                      type: string
-                    name:
-                      type: string
-                    description:
-                      type: string
 
   /{institution-info}:
     get:
       tags:
         - CRUD
-      summary: Retrieve institution information
+      summary: Institution Info
       security:
         - CrudBearerAuth: []
       parameters:
@@ -281,23 +248,12 @@ paths:
       responses:
         '200':
           description: Institution info retrieved
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  id:
-                    type: string
-                  name:
-                    type: string
-                  country:
-                    type: string
 
   /create/submission:
     post:
       tags:
         - Upload
-      summary: Create a submission and get the presigned URL
+      summary: Create Submission
       security:
         - OriginalityBearerAuth: []
       requestBody:
@@ -367,7 +323,7 @@ paths:
     get:
       tags:
         - Upload
-      summary: Check submission status
+      summary: Check Submission Status
       security:
         - OriginalityBearerAuth: []
       parameters:
@@ -389,7 +345,7 @@ paths:
     get:
       tags:
         - Upload
-      summary: Retrieve Originality Report URL
+      summary: Retrieve Report URL
       security:
         - OriginalityBearerAuth: []
       parameters:
