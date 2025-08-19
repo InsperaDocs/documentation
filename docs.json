@@ -116,10 +116,6 @@
                         ]
                     }
                 ]
-            },
-            {
-              "tab": "Testing OpenAPI",
-              "openapi": "/api/openapi.yaml"
             }
         ]
     },
