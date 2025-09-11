@@ -50,15 +50,15 @@
             }
         }
     },
-    "fonts": {
-        "family": "Space Grotesk",
-        "heading": {
-            "family": "Geist Mono"
-        },
-        "body": {
-            "family": "Space Grotesk"
-        }
+  "fonts": {
+    "heading": {
+        "family": "Geist Mono"
     },
+    "body": {
+        "family": "Space Grotesk"
+    }
+  },
+
     "icons": {
         "library": "lucide"
     },
