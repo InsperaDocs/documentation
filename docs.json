@@ -22,7 +22,7 @@
 "styling": {
   "codeblocks": {
     "theme": {
-      "light": "catppuccin-latte",
+      "light": "catppuccin-frappe",
       "dark": "catppuccin-frappe"
     }
   }
