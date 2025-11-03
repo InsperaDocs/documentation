@@ -22,8 +22,8 @@
 "styling": {
   "codeblocks": {
     "theme": {
-      "light": "catppuccin-frappe",
-      "dark": "catppuccin-frappe"
+      "light": "snazzy-light",
+      "dark": "andromeeda"
     }
   }
 },
